@@ -142,7 +142,7 @@
   .ending { text-align: center; padding: 36px 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
   .ending .q { font-family: var(--serif); font-size: 1.18rem; line-height: 1.8; margin: 0 0 16px; }
   .ending .thanks { margin: 0 0 20px; color: var(--muted); font-size: .92rem; }
-  .share { font: inherit; font-size: .95rem; cursor: pointer; background: var(--accent); color: var(--paper); border: 0; border-radius: 999px; padding: 10px 22px; }
+  .share { display: inline-block; text-decoration: none; font: inherit; font-size: .95rem; cursor: pointer; background: var(--accent); color: var(--paper); border: 0; border-radius: 999px; padding: 10px 22px; }
   .share:active { transform: scale(.97); }
 
   footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
@@ -343,7 +343,7 @@
   <section class="ending">
     <p class="q">如果身體是一個水桶，<br>你的桶子裡，現在裝了些什麼？<br>又有哪一層，是今天就能先舀出來的？</p>
     <p class="thanks">謝謝你讀到這裡。</p>
-    <button class="share" id="share" type="button">分享給朋友</button>
+    <a class="share" href="https://www.amazon.com/dp/1628605669" target="_blank" rel="noopener">在 Amazon 購買這本書 ↗</a>
   </section>
 
   <footer>
@@ -352,16 +352,5 @@
   </footer>
 </main>
 
-<script>
-  document.getElementById("share").addEventListener("click", async (e) => {
-    const data = { title: document.title, url: location.href };
-    try {
-      if (navigator.share) { await navigator.share(data); return; }
-      await navigator.clipboard.writeText(location.href);
-      e.target.textContent = "已複製連結 ✓";
-      setTimeout(() => (e.target.textContent = "分享給朋友"), 2000);
-    } catch (_) {}
-  });
-</script>
 </body>
 </html>
