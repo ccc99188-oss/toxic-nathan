@@ -60,6 +60,22 @@
   }
   .intro p { margin: 0 0 10px; } .intro p:last-child { margin: 0; }
 
+  .author {
+    margin: 16px auto 0; display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px;
+  }
+  .author figure { margin: 0; }
+  .author img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
+  .author .label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; color: var(--accent); }
+  .author h2 { font-size: 1.15rem; margin: 2px 0 8px; }
+  .author h2::after { display: none; }
+  .author p { margin: 0 0 8px; font-size: .95rem; }
+  .author .cap { margin: 0; font-size: .82rem; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 520px) {
+    .author { grid-template-columns: 1fr; }
+    .author figure { max-width: 260px; margin: 0 auto; }
+  }
+
   nav.toc { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
   nav.toc a {
     font-size: .85rem; text-decoration: none; color: var(--accent);
@@ -161,6 +177,15 @@
       <p>有些病人對什麼都敏感：一點點藥、一種食物、一股香水味，都可能讓他們好幾天下不了床。檢查常常「都正常」，他們卻真的很不舒服。</p>
       <p>Neil Nathan 醫師行醫五十年，專門照顧這群「極度敏感又中毒」的病人。這本書整理了他的思考方式：先找出讓身體警報一直響的原因，再按照順序，讓身體慢慢「重新開機」。</p>
     </div>
+    <aside class="author" aria-label="關於作者">
+      <figure><img src="nathan-2024.jpg" width="620" height="775" alt="Neil Nathan 醫師坐在會場圓桌旁，側身望向前方"></figure>
+      <div>
+        <span class="label">關於作者</span>
+        <h2>Neil Nathan, MD</h2>
+        <p>美國醫師，行醫超過五十年，長期照顧對環境極度敏感、被黴菌毒素與萊姆病等問題困擾的慢性病人。</p>
+        <p class="cap">2024 年在德州參加整合醫學大會時，與 Nathan 醫師同桌用餐。（林俊言 攝）</p>
+      </div>
+    </aside>
     <nav class="toc" aria-label="目錄">
       <a href="#core">核心概念</a>
       <a href="#causes">常見原因</a>
