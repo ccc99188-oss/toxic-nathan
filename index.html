@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toxic 第二版｜Neil Nathan 環境疾病與極度敏感病人 讀書摘要</title>
+<meta name="description" content="Neil Nathan 醫師《Toxic》第二版讀書摘要：黴菌毒素、萊姆病、多重化學敏感與慢性環境疾病，以及為極度敏感病人「重新開機」的治療順序。">
+<meta property="og:title" content="Toxic 第二版｜讀書摘要">
+<meta property="og:description" content="黴菌、萊姆病、化學敏感與慢性環境疾病：Neil Nathan 的「重新開機」模型。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#eef2ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root {
+    --bg: #eef2ec;
+    --paper: #fbfcfa;
+    --ink: #1f2a24;
+    --muted: #5f6d65;
+    --line: #d7e0d8;
+    --accent: #2f6b4f;
+    --accent-soft: #dcebe2;
+    --warm: #9a5b1e;
+    --warm-soft: #f5e9da;
+    --radius: 18px;
+    --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a17;
+      --paper: #1c2420;
+      --ink: #e8efe9;
+      --muted: #a3b2a9;
+      --line: #2f3b35;
+      --accent: #8fd0ad;
+      --accent-soft: #213229;
+      --warm: #e6b07a;
+      --warm-soft: #33281d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.85; font-size: 17px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  .back { display: inline-block; margin: 20px 0 0; font-size: .88rem; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  header.hero { padding: 44px 0 28px; text-align: center; }
+  .hero .emoji { font-size: 2.6rem; line-height: 1; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 9vw, 3.2rem); letter-spacing: .14em; margin: 14px 0 6px; }
+  .hero .sub { margin: 0; color: var(--muted); font-size: .98rem; }
+  .hero .orig { margin: 6px auto 0; color: var(--muted); font-size: .8rem; font-style: italic; max-width: 560px; line-height: 1.6; }
+  .intro {
+    margin: 28px auto 0; padding: 20px 22px; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 1rem;
+  }
+  .intro p { margin: 0 0 10px; } .intro p:last-child { margin: 0; }
+
+  nav.toc { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  nav.toc a {
+    font-size: .85rem; text-decoration: none; color: var(--accent);
+    background: var(--accent-soft); border-radius: 999px; padding: 4px 12px;
+  }
+
+  section { margin-top: 56px; scroll-margin-top: 16px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { color: var(--muted); margin: 0 0 20px; font-size: .96rem; }
+
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px 22px 18px; margin-bottom: 16px;
+  }
+  .card h3 { font-family: var(--serif); font-size: 1.15rem; margin: 0 0 8px; line-height: 1.5; }
+  .card p { margin: 0 0 10px; }
+  .card p:last-child { margin: 0; }
+  .num { font-size: .78rem; font-weight: 700; color: var(--accent); letter-spacing: .1em; }
+
+  /* 第二版新增 */
+  .new { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .new li {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+    padding: 12px 16px; display: grid; grid-template-columns: 28px 1fr; gap: 8px; font-size: .97rem;
+  }
+
+  /* 桶子圖 */
+  .bucket { display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: center; }
+  @media (max-width: 520px) { .bucket { grid-template-columns: 1fr; } .bucket svg { max-width: 160px; margin: 0 auto; } }
+  .bucket svg { width: 100%; height: auto; }
+
+  /* 原因卡 */
+  details.cause {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    margin-bottom: 12px; overflow: hidden;
+  }
+  details.cause summary {
+    list-style: none; cursor: pointer; padding: 16px 20px;
+    display: grid; grid-template-columns: 34px 1fr 18px; gap: 10px; align-items: center;
+  }
+  details.cause summary::-webkit-details-marker { display: none; }
+  details.cause summary .ic { font-size: 1.4rem; }
+  details.cause summary b { font-family: var(--serif); font-size: 1.08rem; display: block; line-height: 1.4; }
+  details.cause summary small { color: var(--muted); font-size: .84rem; display: block; line-height: 1.5; }
+  details.cause summary::after { content: "＋"; color: var(--muted); }
+  details.cause[open] summary::after { content: "－"; }
+  .cause .body { padding: 0 20px 18px 64px; font-size: .96rem; }
+  @media (max-width: 520px) { .cause .body { padding-left: 20px; } }
+  .cause .body dl { margin: 0; }
+  .cause .body dt { font-size: .78rem; font-weight: 700; color: var(--accent); letter-spacing: .08em; margin-top: 10px; }
+  .cause .body dd { margin: 2px 0 0; }
+  .badge { font-size: .7rem; font-weight: 700; color: var(--warm); background: var(--warm-soft); border-radius: 6px; padding: 1px 6px; margin-left: 6px; vertical-align: 2px; }
+
+  /* 重開機步驟 */
+  .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; position: relative; }
+  .steps::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: var(--line); }
+  .steps li { position: relative; padding: 0 0 18px 52px; counter-increment: s; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 0;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent); color: var(--paper); font-weight: 700;
+    display: grid; place-items: center; font-size: .95rem;
+  }
+  .steps b { font-family: var(--serif); font-size: 1.05rem; display: block; line-height: 1.5; padding-top: 4px; }
+  .steps span { font-size: .95rem; color: var(--ink); }
+
+  .principle {
+    background: var(--accent-soft); border-radius: var(--radius); padding: 20px 22px; margin-top: 8px;
+  }
+  .principle h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 1.1rem; }
+  .principle ul { margin: 0; padding-left: 1.2em; }
+  .principle li { margin-bottom: 4px; }
+
+  .caution { background: var(--warm-soft); border-radius: var(--radius); padding: 20px 22px; }
+  .caution h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 1.1rem; color: var(--warm); }
+  .caution ul { margin: 0; padding-left: 1.2em; }
+  .caution li { margin-bottom: 6px; }
+
+  .ending { text-align: center; padding: 36px 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+  .ending .q { font-family: var(--serif); font-size: 1.18rem; line-height: 1.8; margin: 0 0 16px; }
+  .ending .thanks { margin: 0 0 20px; color: var(--muted); font-size: .92rem; }
+  .share { font: inherit; font-size: .95rem; cursor: pointer; background: var(--accent); color: var(--paper); border: 0; border-radius: 999px; padding: 10px 22px; }
+  .share:active { transform: scale(.97); }
+
+  footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  footer p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="https://ccc99188-oss.github.io/">← 回到作品集</a>
+
+  <header class="hero">
+    <div class="emoji" aria-hidden="true">🌿</div>
+    <h1>TOXIC</h1>
+    <p class="sub">Neil Nathan 醫師《Toxic》第二版 讀書摘要</p>
+    <p class="orig">Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness (2nd Edition, 2025)</p>
+    <div class="intro">
+      <p>有些病人對什麼都敏感：一點點藥、一種食物、一股香水味，都可能讓他們好幾天下不了床。檢查常常「都正常」，他們卻真的很不舒服。</p>
+      <p>Neil Nathan 醫師行醫五十年，專門照顧這群「極度敏感又中毒」的病人。這本書整理了他的思考方式：先找出讓身體警報一直響的原因，再按照順序，讓身體慢慢「重新開機」。</p>
+    </div>
+    <nav class="toc" aria-label="目錄">
+      <a href="#new">第二版新增</a>
+      <a href="#core">核心概念</a>
+      <a href="#causes">常見原因</a>
+      <a href="#reboot">重新開機</a>
+      <a href="#heal">療癒與心</a>
+      <a href="#note">閱讀提醒</a>
+    </nav>
+  </header>
+
+  <section id="new">
+    <h2>第二版新增了什麼</h2>
+    <p class="lead">第一版出版於 2018 年。第二版（2025）每一章都更新了檢查與治療，另外加了幾章：</p>
+    <ul class="new">
+      <li><span aria-hidden="true">🦠</span><span><b>新冠病毒與長新冠</b>：新增專章。病毒感染如何讓原本穩定的人變得敏感、遲遲好不了。</span></li>
+      <li><span aria-hidden="true">📡</span><span><b>電磁場（EMF）</b>：新增專章，討論電磁場對敏感病人的影響。</span></li>
+      <li><span aria-hidden="true">🧪</span><span><b>環境毒素的新發現</b>：新增專章，整理近年對環境毒素的新認識。</span></li>
+      <li><span aria-hidden="true">🍄</span><span><b>黴菌毒素</b>：大幅擴充診斷與治療。作者認為黴菌越來越被看見，是複雜慢性病的主要原因之一。</span></li>
+      <li><span aria-hidden="true">🕷️</span><span><b>萊姆病</b>：更新近年在辨識與治療上的進展。</span></li>
+      <li><span aria-hidden="true">🔥</span><span><b>慢性發炎</b>：講得更深入。</span></li>
+    </ul>
+  </section>
+
+  <section id="core">
+    <h2>三個核心概念</h2>
+    <p class="lead">先懂這三個想法，後面的內容就都串得起來。</p>
+
+    <article class="card">
+      <div class="num">01</div>
+      <h3>總負荷：桶子滿了，最後一滴就會溢出</h3>
+      <div class="bucket">
+        <svg viewBox="0 0 150 170" role="img" aria-label="一個水桶，裝著黴菌、感染、化學物質、壓力等層層負荷，最上面一滴就溢出來">
+          <path d="M20 30 L35 160 L115 160 L130 30" fill="none" stroke="currentColor" stroke-width="3" style="color:var(--muted)"/>
+          <rect x="34" y="128" width="82" height="30" fill="var(--accent)" opacity=".85"/>
+          <rect x="31" y="98" width="88" height="30" fill="var(--accent)" opacity=".65"/>
+          <rect x="28" y="68" width="94" height="30" fill="var(--accent)" opacity=".45"/>
+          <rect x="25" y="38" width="100" height="30" fill="var(--warm)" opacity=".55"/>
+          <text x="75" y="148" text-anchor="middle" font-size="12" fill="var(--paper)">黴菌</text>
+          <text x="75" y="118" text-anchor="middle" font-size="12" fill="var(--paper)">感染</text>
+          <text x="75" y="88" text-anchor="middle" font-size="12" fill="var(--ink)">化學物質</text>
+          <text x="75" y="58" text-anchor="middle" font-size="12" fill="var(--ink)">壓力・創傷</text>
+          <path d="M75 6 C70 16 68 20 75 24 C82 20 80 16 75 6 Z" fill="var(--warm)"/>
+        </svg>
+        <div>
+          <p>身體能承受的負擔有上限。黴菌、感染、化學物質、睡眠不足、情緒創傷……一層層加上去。桶子還沒滿時，人看起來都好好的；一旦滿了，再小的一件事都可能成為「最後一滴」，讓人突然崩盤。</p>
+          <p>所以治療不是找「唯一的病因」，而是一層一層把桶子裡的東西舀出來。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="num">02</div>
+      <h3>細胞危險反應：身體卡在「警戒模式」</h3>
+      <p>作者大量引用 Robert Naviaux 醫師的「細胞危險反應」（cell danger response）理論。細胞遇到威脅時，會關閉正常運作、轉為防禦。威脅過去後，本來應該回到平常狀態。</p>
+      <p>但有些人的細胞一直沒收到「已經安全了」的訊號，就一直停在防禦模式。這時身體會對什麼都過度反應，修復也停擺了。這是很多病人「怎麼治都不會好」的原因之一。</p>
+    </article>
+
+    <article class="card">
+      <div class="num">03</div>
+      <h3>敏感是線索，不是病人「想太多」</h3>
+      <p>極度敏感的病人，常被當成焦慮或身心症。作者主張：敏感本身就是重要的診斷線索，代表身體的警報系統被重複觸發了。</p>
+      <p>這也表示，治療他們要特別小心。一般劑量的藥，對他們可能就太多了。</p>
+    </article>
+  </section>
+
+  <section id="causes">
+    <h2>常見原因</h2>
+    <p class="lead">作者認為，造成極度敏感與中毒最常見的原因如下。點開看各自的線索與處理方向。</p>
+
+    <details class="cause" open>
+      <summary><span class="ic" aria-hidden="true">🍄</span><span><b>黴菌毒素</b><small>作者心中最常被忽略的元兇</small></span></summary>
+      <div class="body"><dl>
+        <dt>線索</dt><dd>住在、工作在曾漏水或潮濕的建築；疲倦、腦霧、全身痛、對很多東西過敏，症狀多又跨系統。</dd>
+        <dt>檢查</dt><dd>檢查環境（請專業人員評估住家）與身體（例如尿液黴菌毒素檢測）。</dd>
+        <dt>處理方向</dt><dd>最重要的是先離開或整治暴露源，不然治療再多都會白費。接著打開排毒管道，用「結合劑」（例如膽酸螯合劑、活性碳、膨潤土）把毒素帶出體外。若黴菌已在鼻竇或腸道「定居」，也需要處理。書末附錄 A 專門講如何處理住家黴菌。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🕷️</span><span><b>萊姆病與共同感染</b><small>蜱蟲帶來的不只一種病菌</small></span></summary>
+      <div class="body"><dl>
+        <dt>線索</dt><dd>症狀會游走、時好時壞。共同感染各有特徵，例如巴東體（Bartonella）常與焦慮、易怒等精神症狀、腳底痛、像妊娠紋的皮膚紋路有關；巴貝西蟲（Babesia）常有「吸不到氣」的感覺與夜間盜汗。</dd>
+        <dt>處理方向</dt><dd>檢驗不一定準，常要結合臨床判斷。作者強調，敏感病人要先處理黴菌、先讓身體穩定下來，再治療感染，否則容易出現強烈的好轉反應（Herxheimer 反應）。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🌡️</span><span><b>肥大細胞活化</b><small>身體的過敏警報器太容易被觸發</small></span></summary>
+      <div class="body"><dl>
+        <dt>線索</dt><dd>潮紅、搔癢、蕁麻疹、心悸、腸胃不適；對食物、氣味、藥物都容易起反應。</dd>
+        <dt>處理方向</dt><dd>先讓警報器安靜下來：低組織胺飲食、抗組織胺藥（H1 與 H2 阻斷劑）、穩定肥大細胞的藥物或營養素。肥大細胞穩定了，病人才承受得起後面的治療。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🩸</span><span><b>紫質症（續發性）</b><small>毒素干擾血紅素合成</small></span></summary>
+      <div class="body"><dl>
+        <dt>線索</dt><dd>腹痛、神經症狀、焦慮；有時尿液顏色偏深。作者認為毒素可能誘發續發性的紫質代謝異常，臨床上常被漏掉。</dd>
+        <dt>處理方向</dt><dd>辨識並避開誘發因子，必要時給予針對性治療。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🔥</span><span><b>一氧化碳中毒</b><small>看不見、聞不到的慢性暴露</small></span></summary>
+      <div class="body"><dl>
+        <dt>線索</dt><dd>頭痛、疲倦、認知變差，症狀在家裡特別明顯。暖氣、熱水器或爐具通風不良都可能是來源。</dd>
+        <dt>處理方向</dt><dd>先找出並排除來源（家中裝一氧化碳偵測器），再處理已經造成的損傷。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🦠</span><span><b>新冠病毒與長新冠</b><span class="badge">第二版新增</span><small>感染後一直回不去</small></span></summary>
+      <div class="body"><dl>
+        <dt>重點</dt><dd>作者用同一套「總負荷」與「細胞危險反應」來理解長新冠：病毒可能是壓垮桶子的最後一滴，也可能讓原本潛伏的問題（例如黴菌、肥大細胞活化）浮上來。處理的方式也一樣：找出其他負荷，按順序讓身體重新開機。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">📡</span><span><b>電磁場（EMF）</b><span class="badge">第二版新增</span><small>敏感病人的另一個負荷</small></span></summary>
+      <div class="body"><dl>
+        <dt>重點</dt><dd>作者把電磁場放進「總負荷」的一部分，認為部分敏感病人會受到影響。可以先從簡單的做起：減少暴露，特別是睡覺的環境。</dd>
+      </dl></div>
+    </details>
+
+    <details class="cause">
+      <summary><span class="ic" aria-hidden="true">🧪</span><span><b>其他環境毒素</b><span class="badge">第二版新增</span><small>重金屬、農藥、塑化劑等</small></span></summary>
+      <div class="body"><dl>
+        <dt>重點</dt><dd>新增專章整理環境毒素的新發現。日常生活中的化學物質層層累積，也是桶子裡的一層。</dd>
+      </dl></div>
+    </details>
+  </section>
+
+  <section id="reboot">
+    <h2>重新開機：治療的順序</h2>
+    <p class="lead">書的第三部是全書核心。對極度敏感的病人，<b>做事的順序</b>和做什麼一樣重要。大致的方向是：</p>
+
+    <ol class="steps">
+      <li><b>先遠離暴露源</b><span>不再繼續往桶子裡加東西：整治或離開有黴菌的環境、減少化學物質接觸。</span></li>
+      <li><b>讓大腦的警報系統安靜下來</b><span>重新訓練邊緣系統（limbic system），讓大腦不再把所有刺激都當成危險。書中介紹了幾套大腦再訓練課程。</span></li>
+      <li><b>重啟迷走神經</b><span>迷走神經連結大腦與身體，讓身體從「戰或逃」回到「休息與修復」。</span></li>
+      <li><b>關掉細胞危險反應</b><span>讓細胞收到「已經安全了」的訊號，才能回到正常運作與修復。</span></li>
+      <li><b>穩定肥大細胞</b><span>警報器安靜了，身體才承受得起排毒與殺菌。</span></li>
+      <li><b>打開排毒管道</b><span>肝膽、腸道、腎臟、淋巴先通暢，毒素才有出口，否則一動就會不舒服。</span></li>
+      <li><b>排出毒素、治療感染</b><span>用結合劑排出黴菌毒素，處理體內的黴菌定居，最後才治療萊姆病與共同感染。</span></li>
+      <li><b>修復與重建</b><span>支持粒線體、荷爾蒙、腸道等系統，讓身體慢慢找回彈性。</span></li>
+    </ol>
+
+    <div class="principle">
+      <h3>照顧敏感病人的原則</h3>
+      <ul>
+        <li><b>從極低劑量開始，慢慢加</b>：有時只用一般劑量的一小部分，甚至一滴。</li>
+        <li><b>一次只改一件事</b>：才知道是什麼造成反應。</li>
+        <li><b>相信病人的感受</b>：病人說「我受不了」，就要停下來調整。</li>
+        <li><b>不必一次全做</b>：每個人的順序可以不同，重點是讓身體一直待在承受得了的範圍裡。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="heal">
+    <h2>療癒，也關乎心</h2>
+    <article class="card">
+      <p>書的最後一部，作者談壓力與心理層面的療癒。長期生病的人，常累積了大量的恐懼、孤單與不被相信的傷。這些情緒本身也是桶子裡的一層，也會讓警報系統一直響著。</p>
+      <p>作者也談到，許多病人在漫長的生病過程中，經歷了一種「靈性上的覺醒」：重新看待自己、生命與身邊的人。他想傳達的是希望：就算是最敏感、最難治的病人，只要找到原因、照對順序，很多人都能慢慢好起來。</p>
+    </article>
+  </section>
+
+  <section id="note">
+    <h2>閱讀提醒</h2>
+    <div class="caution">
+      <h3>讀這本書時，可以放在心上的事</h3>
+      <ul>
+        <li>這本書的觀點來自<b>功能醫學與環境醫學</b>。其中部分診斷與治療，例如慢性黴菌毒素疾病、慢性萊姆病、部分檢驗方法，在主流醫學仍有爭議，證據強度不一。</li>
+        <li>書中的價值在於提醒我們：<b>認真看待病人的敏感與痛苦</b>，把環境暴露放進問診，並且用更溫和、更有順序的方式治療。</li>
+        <li>請不要依照本摘要自行用藥、停藥或做排毒療程。有相關困擾，請與了解你病史的醫師討論。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ending">
+    <p class="q">如果身體是一個水桶，<br>你的桶子裡，現在裝了些什麼？<br>又有哪一層，是今天就能先舀出來的？</p>
+    <p class="thanks">謝謝你讀到這裡。</p>
+    <button class="share" id="share" type="button">分享給朋友</button>
+  </section>
+
+  <footer>
+    <p>原書：Neil Nathan, MD，<i>Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness</i>，2nd Edition，Victory Belt Publishing，2025。第一版序：Robert K. Naviaux, MD, PhD；第二版序：Joe Mather, MD。</p>
+    <p>本頁為讀者個人整理的摘要，不是原書內容的翻譯，也不構成醫療建議。</p>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("share").addEventListener("click", async (e) => {
+    const data = { title: document.title, url: location.href };
+    try {
+      if (navigator.share) { await navigator.share(data); return; }
+      await navigator.clipboard.writeText(location.href);
+      e.target.textContent = "已複製連結 ✓";
+      setTimeout(() => (e.target.textContent = "分享給朋友"), 2000);
+    } catch (_) {}
+  });
+</script>
+</body>
+</html>
