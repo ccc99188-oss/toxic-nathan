@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>支持荷爾蒙｜Toxic 第二版 讀書摘要</title>
+<meta name="description" content="Neil Nathan《Toxic》第二版第 14 章：慢性發炎如何影響腎上腺、甲狀腺、性荷爾蒙、抗利尿激素與胰島素，以及為什麼要整合三大軸線。">
+<meta property="og:title" content="支持荷爾蒙｜Toxic 第二版 讀書摘要">
+<meta property="og:description" content="荷爾蒙彼此牽動：慢性病人常見的輕度缺乏與整合治療。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#eef2ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root {
+    --bg: #eef2ec; --paper: #fbfcfa; --ink: #1f2a24; --muted: #5f6d65; --line: #d7e0d8;
+    --accent: #2f6b4f; --accent-soft: #dcebe2; --warm: #9a5b1e; --warm-soft: #f5e9da;
+    --radius: 18px;
+    --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a17; --paper: #1c2420; --ink: #e8efe9; --muted: #a3b2a9; --line: #2f3b35;
+      --accent: #8fd0ad; --accent-soft: #213229; --warm: #e6b07a; --warm-soft: #33281d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.85; font-size: 17px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  .back { display: inline-block; margin: 20px 0 0; font-size: .88rem; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  header.hero { padding: 40px 0 24px; text-align: center; }
+  .hero .step { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 12px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2rem, 8vw, 2.6rem); letter-spacing: .1em; margin: 14px 0 6px; }
+  .hero .sub { margin: 0; color: var(--muted); font-size: .96rem; }
+  .intro {
+    margin: 26px auto 0; padding: 18px 22px; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 1rem;
+  }
+  .intro p { margin: 0; }
+
+  nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  nav.toc a { font-size: .85rem; text-decoration: none; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 12px; }
+
+  section { margin-top: 52px; scroll-margin-top: 16px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { color: var(--muted); margin: 0 0 18px; font-size: .96rem; }
+
+  .item {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px 18px; margin-bottom: 14px;
+    display: grid; grid-template-columns: 40px 1fr; gap: 6px 14px;
+  }
+  .item .n {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .92rem;
+    display: grid; place-items: center;
+  }
+  .item h3 { font-family: var(--serif); font-size: 1.12rem; margin: 4px 0 6px; line-height: 1.5; }
+  .item p { margin: 0 0 8px; font-size: .97rem; }
+  .item p:last-child { margin: 0; }
+  .item .ic { margin-right: 4px; }
+  .tip { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc { background: var(--warm-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc b { color: var(--warm); }
+  @media (max-width: 480px) {
+    .item { grid-template-columns: 1fr; }
+  }
+
+  .mottos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+  .mottos div {
+    background: var(--accent); color: var(--paper); border-radius: 14px;
+    padding: 16px 12px; text-align: center; font-family: var(--serif); font-size: 1.08rem; letter-spacing: .08em;
+  }
+
+  .nextprev { margin-top: 44px; display: flex; justify-content: center; }
+  .btn { display: inline-block; text-decoration: none; font-size: .95rem; background: var(--accent); color: var(--paper); border-radius: 999px; padding: 10px 22px; }
+
+  footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  footer p { margin: 0 0 6px; }
+  .sym { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; padding: 0; list-style: none; }
+  .sym li { font-size: .88rem; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; line-height: 1.6; }
+  .sub3 { font-weight: 700; font-size: .95rem; margin: 12px 0 2px; color: var(--accent); }
+  .sub3:first-of-type { margin-top: 4px; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 8px; margin: 6px 0 12px; font-size: .9rem; }
+  .flow span { background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 4px 10px; font-weight: 600; }
+  .flow i { font-style: normal; color: var(--muted); }
+  .axes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; position: relative; }
+  .axes div {
+    background: var(--accent); color: var(--paper); border-radius: 14px;
+    padding: 16px 8px; text-align: center; font-family: var(--serif); font-size: 1.06rem; line-height: 1.5;
+  }
+  .axes small { display: block; font-family: var(--sans); font-size: .72rem; opacity: .85; letter-spacing: .04em; }
+  @media (max-width: 420px) { .axes { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./#reboot">← 回到 Toxic 讀書摘要</a>
+
+  <header class="hero">
+    <span class="step">重新開機・第 8 步</span>
+    <h1>支持荷爾蒙</h1>
+    <p class="sub">Neil Nathan《Toxic》第二版 第 14 章 讀書摘要</p>
+    <div class="intro">
+      <p>修復與重建的階段，荷爾蒙常是被忽略的一環。慢性發炎會影響大腦裡調控荷爾蒙的中樞，而荷爾蒙之間又彼此牽動：一個失衡，其他也跟著受影響。</p>
+    </div>
+    <nav class="toc" aria-label="目錄">
+      <a href="#why">為什麼會失衡</a>
+      <a href="#symptoms">各荷爾蒙的線索</a>
+      <a href="#together">整合治療</a>
+    </nav>
+  </header>
+
+  <section id="why">
+    <h2>為什麼會失衡</h2>
+
+    <article class="item">
+      <div class="n">1</div>
+      <div>
+        <h3>發炎會波及大腦的荷爾蒙中樞</h3>
+        <p>當毒素（例如黴菌）或感染性病原（如萊姆病、巴東體）引發發炎時，也會使大腦某些部位發炎，例如位於大腦底部的腦下垂體。</p>
+        <div class="flow" aria-label="發炎影響下視丘與腦下垂體，進而影響各種荷爾蒙">
+          <span>毒素・感染</span><i>→</i><span>發炎</span><i>→</i><span>下視丘・腦下垂體</span><i>→</i><span>腎上腺・甲狀腺・性荷爾蒙・ADH</span>
+        </div>
+        <p>腦下垂體與下視丘相連，而下視丘在神經學上幫助調節腦下垂體生產重要物質，例如腎上腺荷爾蒙、甲狀腺荷爾蒙、性荷爾蒙及抗利尿激素（ADH）。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">2</div>
+      <div>
+        <h3>荷爾蒙彼此緊密互相影響</h3>
+        <p>同樣重要但常被忽略的是：一個荷爾蒙若失衡，就可能對其他荷爾蒙產生深遠影響。</p>
+        <p class="tip">臨床上常見慢性病患者的腎上腺、甲狀腺與性荷爾蒙分泌不足，這會進一步加重並複雜化他們的疾病。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">3</div>
+      <div>
+        <h3>「輕度缺乏」常落在專科的縫隙裡</h3>
+        <p>荷爾蒙的評估與治療屬於內分泌學的專業範疇，但內分泌科醫師通常專注於治療因器官損傷而導致的「嚴重」荷爾蒙失衡。</p>
+        <p class="doc"><b>作者觀點：</b>對於身體暫時性分泌不足、產生「輕度缺乏」的情況，內分泌學界多半不認為屬於他們的領域，這些病人因此容易被漏掉。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="symptoms">
+    <h2>各荷爾蒙的線索</h2>
+    <p class="lead">以下是書中整理的常見症狀。症狀彼此重疊很多，需要由醫師綜合評估與檢驗。</p>
+
+    <article class="item">
+      <div class="n">4</div>
+      <div>
+        <h3>腎上腺分泌不足</h3>
+        <p class="sub3">DHEA（脫氫表雄酮）缺乏</p>
+        <ul class="sym"><li>疲倦</li><li>虛弱</li><li>精力枯竭</li><li>認知能力下降</li><li>憂鬱或情緒低落</li><li>性慾降低</li><li>易反覆感染</li><li>籠統的「我覺得哪裡不太對勁」</li></ul>
+        <p class="sub3">Cortisol（皮質醇）缺乏</p>
+        <ul class="sym"><li>疲勞</li><li>精力耗竭</li><li>過敏傾向</li><li>異常毛髮生長</li><li>流產傾向</li></ul>
+        <p class="sub3">Mineralocorticoids（礦物皮質激素）缺乏</p>
+        <ul class="sym"><li>低血壓</li><li>起立時頭暈、眼前發黑</li><li>疲勞</li><li>虛弱</li><li>精力枯竭</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">5</div>
+      <div>
+        <h3>甲狀腺功能低下</h3>
+        <p>在慢性病患者中相當普遍。</p>
+        <ul class="sym"><li>疲勞、倦怠</li><li>精力枯竭</li><li>便秘</li><li>體溫偏低、經常怕冷</li><li>掉髮</li><li>皮膚乾燥</li><li>記憶力減退、注意力不集中</li><li>月經不規則</li><li>體重上升</li><li>眉毛外側三分之一缺毛</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">6</div>
+      <div>
+        <h3>雌激素缺乏</h3>
+        <ul class="sym"><li>熱潮紅</li><li>夜間盜汗</li><li>失眠</li><li>情緒起伏大</li><li>憂鬱</li><li>焦慮</li><li>健忘、注意力不集中</li><li>慢性疲勞</li><li>陰道乾澀</li><li>性慾下降</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">7</div>
+      <div>
+        <h3>睪固酮缺乏</h3>
+        <ul class="sym"><li>慢性疲勞</li><li>精力減退</li><li>體力與耐力下降</li><li>性慾低落</li><li>勃起功能障礙</li><li>肌肉無力、肌肉量減少</li><li>情緒低落、憂鬱</li><li>情緒起伏大</li><li>熱潮紅</li><li>心悸</li><li>失眠</li><li>注意力不集中</li><li>社交退縮、抗拒人際互動</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">8</div>
+      <div>
+        <h3>抗利尿激素（ADH）缺乏</h3>
+        <p>兩大典型症狀：</p>
+        <ul class="sym"><li>頻繁排尿（polyuria）</li><li>難以滿足的口渴感（polydipsia）</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">9</div>
+      <div>
+        <h3>副甲狀腺功能亢進</h3>
+        <ul class="sym"><li>慢性疲勞</li><li>肌肉痠痛、關節疼痛</li><li>骨頭疼痛</li><li>失眠</li><li>記憶力下降</li><li>注意力不集中</li><li>憂鬱、情緒低落</li><li>頭痛</li></ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">10</div>
+      <div>
+        <h3>胰島素與慢性發炎</h3>
+        <p>胰島素本身具有促進發炎的特性。因此，維持胰島素水平低而穩定，有助於降低全身性慢性發炎。</p>
+        <p>不幸的是，許多慢性病患者因代謝失調與瘦體素（leptin）代謝異常，體重上升明顯，且減重困難。</p>
+        <p class="tip">直到引起發炎的根本原因被處理後，體重與胰島素狀態才會逐漸恢復。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="together">
+    <h2>整合治療</h2>
+    <article class="item">
+      <div class="n">11</div>
+      <div>
+        <h3>三大軸線，一起考慮</h3>
+        <p>荷爾蒙之間存在高度交織的互動關係，因此治療時要同時考慮並整合三大軸線，而不是只單獨補一種。</p>
+      </div>
+    </article>
+    <div class="axes">
+      <div>性荷爾蒙<small>Sex Hormones</small></div>
+      <div>甲狀腺荷爾蒙<small>Thyroid Hormones</small></div>
+      <div>腎上腺荷爾蒙<small>Adrenal Hormones</small></div>
+    </div>
+  </section>
+
+  <div class="nextprev"><a class="btn" href="./#reboot">← 回到治療的順序</a></div>
+
+  <footer>
+    <p>整理自 Neil Nathan, MD，<i>Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness</i>，2nd Edition，Victory Belt Publishing，2025，第 14 章。</p>
+    <p>本頁為讀者個人整理，不構成醫療建議。上述症狀都不具專一性，可能有許多其他原因；請勿自行補充荷爾蒙，有相關困擾請與了解你病史的醫師討論並接受適當檢驗。</p>
+  </footer>
+</main>
+</body>
+</html>
