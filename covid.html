@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>後疫情時代如何自處｜Toxic 第二版 讀書摘要</title>
+<meta name="description" content="Neil Nathan《Toxic》第二版：對感染的恐懼如何削弱免疫，以及每天練習安撫神經系統的重要性。附臨床筆記。">
+<meta property="og:title" content="後疫情時代如何自處｜Toxic 第二版 讀書摘要">
+<meta property="og:description" content="安撫自己，不是否認風險，而是保護免疫的最佳策略。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#eef2ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root {
+    --bg: #eef2ec; --paper: #fbfcfa; --ink: #1f2a24; --muted: #5f6d65; --line: #d7e0d8;
+    --accent: #2f6b4f; --accent-soft: #dcebe2; --warm: #9a5b1e; --warm-soft: #f5e9da;
+    --radius: 18px;
+    --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a17; --paper: #1c2420; --ink: #e8efe9; --muted: #a3b2a9; --line: #2f3b35;
+      --accent: #8fd0ad; --accent-soft: #213229; --warm: #e6b07a; --warm-soft: #33281d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.85; font-size: 17px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  .back { display: inline-block; margin: 20px 0 0; font-size: .88rem; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  header.hero { padding: 40px 0 24px; text-align: center; }
+  .hero .step { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 12px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2rem, 8vw, 2.6rem); letter-spacing: .1em; margin: 14px 0 6px; }
+  .hero .sub { margin: 0; color: var(--muted); font-size: .96rem; }
+  .intro {
+    margin: 26px auto 0; padding: 18px 22px; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 1rem;
+  }
+  .intro p { margin: 0; }
+
+  nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  nav.toc a { font-size: .85rem; text-decoration: none; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 12px; }
+
+  section { margin-top: 52px; scroll-margin-top: 16px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { color: var(--muted); margin: 0 0 18px; font-size: .96rem; }
+
+  .item {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px 18px; margin-bottom: 14px;
+    display: grid; grid-template-columns: 40px 1fr; gap: 6px 14px;
+  }
+  .item .n {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .92rem;
+    display: grid; place-items: center;
+  }
+  .item h3 { font-family: var(--serif); font-size: 1.12rem; margin: 4px 0 6px; line-height: 1.5; }
+  .item p { margin: 0 0 8px; font-size: .97rem; }
+  .item p:last-child { margin: 0; }
+  .item .ic { margin-right: 4px; }
+  .tip { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc { background: var(--warm-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc b { color: var(--warm); }
+  @media (max-width: 480px) {
+    .item { grid-template-columns: 1fr; }
+  }
+
+
+  .nextprev { margin-top: 44px; display: flex; justify-content: center; }
+  .btn { display: inline-block; text-decoration: none; font-size: .95rem; background: var(--accent); color: var(--paper); border-radius: 999px; padding: 10px 22px; }
+
+  footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  footer p { margin: 0 0 6px; }
+  .see { font-size: .9rem; color: var(--accent); }
+  .see a { color: inherit; font-weight: 600; }
+  .loop { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 8px; margin: 12px 0 6px; font-size: .9rem; }
+  .loop span { background: var(--warm-soft); color: var(--warm); border-radius: 10px; padding: 4px 10px; font-weight: 600; }
+  .loop i { font-style: normal; color: var(--muted); }
+  .loop-note { text-align: center; font-size: .82rem; color: var(--muted); margin: 0 0 10px; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 8px; margin: 12px 0; font-size: .9rem; }
+  .flow span { background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 4px 10px; font-weight: 600; }
+  .flow i { font-style: normal; color: var(--muted); }
+  .sub3 { font-weight: 700; font-size: .95rem; margin: 12px 0 2px; color: var(--accent); }
+  .sym { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; padding: 0; list-style: none; }
+  .sym li { font-size: .88rem; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; line-height: 1.6; }
+  .hope {
+    margin-top: 16px; text-align: center; padding: 26px 22px;
+    background: var(--accent-soft); border-radius: var(--radius);
+    font-family: var(--serif); font-size: 1.08rem; line-height: 1.9;
+  }
+  .hope p { margin: 0; }
+  .case {
+    background: var(--warm-soft); border-radius: var(--radius); padding: 24px 22px 20px;
+    border-left: 4px solid var(--warm);
+  }
+  .case .label { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .1em; color: var(--warm); margin-bottom: 6px; }
+  .case h3 { font-family: var(--serif); font-size: 1.15rem; margin: 0 0 12px; }
+  .case p { margin: 0 0 12px; font-size: .97rem; }
+  .case .soothe {
+    margin: 14px 0; padding: 16px 12px; text-align: center; border-radius: 14px;
+    background: var(--paper); font-family: var(--serif); font-size: 1.2rem; color: var(--accent);
+  }
+  .case .soothe small { display: block; font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: 4px; }
+  .case blockquote {
+    margin: 14px 0; padding: 4px 0 4px 16px; border-left: 3px solid var(--accent);
+    font-family: var(--serif); font-size: 1rem; line-height: 1.9;
+  }
+  .case .sign { text-align: right; color: var(--muted); font-size: .88rem; margin: 14px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./#causes">← 回到 Toxic 讀書摘要</a>
+
+  <header class="hero">
+    <span class="step">常見原因・新冠病毒與長新冠</span>
+    <h1>後疫情時代如何自處</h1>
+    <p class="sub">Neil Nathan《Toxic》第二版 新冠相關章節 讀書摘要</p>
+    <div class="intro">
+      <p>眾所皆知，壓力會削弱免疫系統，讓我們更容易感染。疫情之後，很多人對感染的恐懼一直沒有離開。作者提醒：安撫自己的神經系統，不是否認風險，而是保護免疫的最佳策略。</p>
+    </div>
+    <nav class="toc" aria-label="目錄">
+      <a href="#fear">恐懼的兩難</a>
+      <a href="#calm">每天練習安撫自己</a>
+      <a href="#case">臨床筆記</a>
+    </nav>
+  </header>
+
+  <section id="fear">
+    <h2>恐懼的兩難</h2>
+    <article class="item">
+      <div class="n">1</div>
+      <div>
+        <h3>越怕感染，越容易被感染</h3>
+        <p>這讓我們陷入典型的兩難境地，「進退維谷」：我們對感染的恐懼，反而讓自己更容易被感染。</p>
+        <div class="loop" aria-label="害怕感染帶來壓力，壓力削弱免疫，免疫下降使人更容易感染，又更害怕">
+          <span>害怕感染</span><i>→</i><span>壓力</span><i>→</i><span>免疫被削弱</span><i>→</i><span>更容易感染</span><i>↺</i>
+        </div>
+        <p class="loop-note">恐懼本身，成了循環的一部分</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="calm">
+    <h2>每天練習安撫自己</h2>
+
+    <article class="item">
+      <div class="n">2</div>
+      <div>
+        <h3>承認恐懼，然後安撫它</h3>
+        <p>降低感染風險的一項重要策略，就是<b>承認自身的恐懼</b>，並積極努力去減輕它。</p>
+        <div class="flow" aria-label="承認恐懼，安撫邊緣系統與迷走神經，免疫恢復最佳功能">
+          <span>承認恐懼</span><i>→</i><span>安撫邊緣系統・迷走神經</span><i>→</i><span>免疫恢復最佳功能</span>
+        </div>
+        <p class="doc"><b>作者觀點：</b>這並不是否認風險，而是每天練習安撫自己。唯有如此，免疫系統才能恢復最佳功能，這也是避免未來疾病的最佳策略。</p>
+        <p class="see">→ 相關說明：首頁重新開機的<a href="./#reboot">第 2、3 步</a>，以及<a href="polyvagal.html">「多重迷走神經理論」</a>。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">3</div>
+      <div>
+        <h3>讓神經系統退出「過度警戒」</h3>
+        <p>我們必須找到一種方法，在這片被恐懼撕裂的土地上，以更多的平靜與安穩生活。</p>
+        <p class="sub3">花更多時間待在大自然</p>
+        <ul class="sym"><li>公園</li><li>森林</li><li>海邊</li><li>山中</li></ul>
+        <p class="sub3">給自己時間</p>
+        <ul class="sym"><li>靜坐</li><li>太極</li><li>瑜伽</li><li>只是安靜地呼吸</li></ul>
+        <p class="tip">這類活動如今比以往任何時候都更重要，因為它們讓神經系統有機會從「過度警戒模式」中退出，回到寧靜與平和。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="case">
+    <h2>臨床筆記</h2>
+    <article class="case">
+      <span class="label">我的臨床觀察</span>
+      <h3>「沒事的，我是安全的。」</h3>
+      <p>最近有幾個治療效果很好的病人，不約而同提到同一件事：當症狀又有點要復發的時候，他們會安撫自己。</p>
+      <div class="soothe">「沒事的，我是安全的。」<small>一邊摸著自己，一邊在心裡說</small></div>
+      <p>今天讀到 Dr. Neil Nathan 在談 COVID-19 的章節裡也提到：</p>
+      <blockquote>先承認會有這個情緒是很正常的，再安撫自己。讓神經系統回歸平和，並不是否認風險的存在，而是改善免疫、避免未來再染疫的最佳策略。</blockquote>
+      <p class="sign">撰文者：林俊言中醫師</p>
+    </article>
+    <div class="hope">
+      <p>承認害怕，然後溫柔地告訴自己：<br>「我是安全的。」</p>
+    </div>
+  </section>
+
+  <div class="nextprev"><a class="btn" href="./#causes">← 回到常見原因</a></div>
+
+  <footer>
+    <p>整理自 Neil Nathan, MD，<i>Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness</i>，2nd Edition，Victory Belt Publishing，2025，第 147、149 頁。臨床筆記為讀者本人撰寫。</p>
+    <p>本頁為讀者個人整理，不構成醫療建議。安撫神經系統是照顧自己的一部分，不能取代必要的防護、檢查與治療；有相關困擾，請與了解你病史的醫師討論。</p>
+  </footer>
+</main>
+</body>
+</html>
