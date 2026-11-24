@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>細胞危險反應｜Toxic 第二版 讀書摘要</title>
+<meta name="description" content="Neil Nathan《Toxic》第二版第 11 章：Naviaux 醫師的細胞危險反應（CDR）模型，以及為什麼慢性病人需要「重新開機」。附中文示意圖。">
+<meta property="og:title" content="細胞危險反應｜Toxic 第二版 讀書摘要">
+<meta property="og:description" content="問題都處理了卻還沒好？身體可能忘了怎麼「關機」。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#eef2ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root {
+    --bg: #eef2ec; --paper: #fbfcfa; --ink: #1f2a24; --muted: #5f6d65; --line: #d7e0d8;
+    --accent: #2f6b4f; --accent-soft: #dcebe2; --warm: #9a5b1e; --warm-soft: #f5e9da;
+    --radius: 18px;
+    --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a17; --paper: #1c2420; --ink: #e8efe9; --muted: #a3b2a9; --line: #2f3b35;
+      --accent: #8fd0ad; --accent-soft: #213229; --warm: #e6b07a; --warm-soft: #33281d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.85; font-size: 17px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  .back { display: inline-block; margin: 20px 0 0; font-size: .88rem; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  header.hero { padding: 40px 0 24px; text-align: center; }
+  .hero .step { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 12px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2rem, 8vw, 2.6rem); letter-spacing: .1em; margin: 14px 0 6px; }
+  .hero .sub { margin: 0; color: var(--muted); font-size: .96rem; }
+  .intro {
+    margin: 26px auto 0; padding: 18px 22px; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 1rem;
+  }
+  .intro p { margin: 0; }
+
+  nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  nav.toc a { font-size: .85rem; text-decoration: none; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 12px; }
+
+  section { margin-top: 52px; scroll-margin-top: 16px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { color: var(--muted); margin: 0 0 18px; font-size: .96rem; }
+
+  .item {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px 18px; margin-bottom: 14px;
+    display: grid; grid-template-columns: 40px 1fr; gap: 6px 14px;
+  }
+  .item .n {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .92rem;
+    display: grid; place-items: center;
+  }
+  .item h3 { font-family: var(--serif); font-size: 1.12rem; margin: 4px 0 6px; line-height: 1.5; }
+  .item p { margin: 0 0 8px; font-size: .97rem; }
+  .item p:last-child { margin: 0; }
+  .item .ic { margin-right: 4px; }
+  .tip { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc { background: var(--warm-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc b { color: var(--warm); }
+  @media (max-width: 480px) {
+    .item { grid-template-columns: 1fr; }
+  }
+
+  .mottos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+  .mottos div {
+    background: var(--accent); color: var(--paper); border-radius: 14px;
+    padding: 16px 12px; text-align: center; font-family: var(--serif); font-size: 1.08rem; letter-spacing: .08em;
+  }
+
+  .nextprev { margin-top: 44px; display: flex; justify-content: center; }
+  .btn { display: inline-block; text-decoration: none; font-size: .95rem; background: var(--accent); color: var(--paper); border-radius: 999px; padding: 10px 22px; }
+
+  footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  footer p { margin: 0 0 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+  .chips li { font-size: .88rem; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 12px; font-weight: 600; }
+  .figure { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 12px 12px; margin: 0 0 16px; }
+  @media (max-width: 480px) { .figure { padding: 14px 2px 10px; margin-left: -8px; margin-right: -8px; } }
+  .figure svg { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto; font-family: var(--sans); }
+  .figure figcaption { text-align: center; font-size: .82rem; color: var(--muted); margin-top: 8px; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 8px; margin: 8px 0 12px; font-size: .9rem; }
+  .flow span { background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 4px 10px; font-weight: 600; }
+  .flow i { font-style: normal; color: var(--muted); }
+  .item.key { border: 2px solid var(--warm); background: var(--warm-soft); }
+  .item.key .n { background: var(--warm); color: var(--paper); }
+  .alert { font-weight: 700; color: var(--warm); }
+  .see { font-size: .9rem; color: var(--accent); }
+  .see a { color: inherit; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./#cdr">← 回到 Toxic 讀書摘要</a>
+
+  <header class="hero">
+    <span class="step">核心概念 02・重新開機第 4 步</span>
+    <h1>細胞危險反應</h1>
+    <p class="sub">Neil Nathan《Toxic》第二版 第 11 章 讀書摘要</p>
+    <div class="intro">
+      <p>為什麼問題都處理了，病人還是好不起來？Naviaux 醫師的「細胞危險反應」（Cell Danger Response, CDR）提供了一個答案：身體可能失去了「關閉」疾病過程的能力，需要被重新開機。</p>
+    </div>
+    <nav class="toc" aria-label="目錄">
+      <a href="#reboot">為什麼要重新開機</a>
+      <a href="#what">什麼是 CDR</a>
+      <a href="#virus">細胞遇到病毒時</a>
+      <a href="#eight">8 個連鎖反應</a>
+    </nav>
+  </header>
+
+  <section id="reboot">
+    <h2>為什麼要「重新開機」</h2>
+
+    <article class="item">
+      <div class="n">1</div>
+      <div>
+        <h3>對慢性疾病的新理解</h3>
+        <p>我們對慢性疾病的新理解是：它的形成源於對某種也許早已不存在的刺激所引發的持續性發炎反應。這改變了我們對診斷與治療的整個思維範式。</p>
+        <p>我們的首要任務是找出那些讓發炎持續下去的因素，例如毒素、感染，以及其他生化失衡。</p>
+        <p class="tip">一旦我們成功處理了這些問題，卻常發現病人仍未完全康復：他們的身體似乎失去了「關閉」疾病過程的能力或記憶。因此，我們必須「重新啟動系統」。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">2</div>
+      <div>
+        <h3>就像電腦當機</h3>
+        <p>幾乎每個人都經歷過：電腦當機時，唯一的辦法就是關機重啟。身體「卡住」時也是一樣，它就像當機，無法正常運作。</p>
+        <p>我們越來越發現，長期生病的病人，他們的系統並不會在問題解決後自動重啟。</p>
+        <p>容易「卡住」、需要逐一重啟的身體系統：</p>
+        <ul class="chips"><li>神經</li><li>免疫</li><li>內分泌</li><li>腸胃</li><li>甲基化功能</li><li>排毒機制</li><li>心理</li><li>靈性與情緒</li></ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="what">
+    <h2>什麼是 CDR</h2>
+    <article class="item">
+      <div class="n">3</div>
+      <div>
+        <h3>深植於演化中的原始防禦</h3>
+        <p>2013 年，加州大學聖地牙哥分校醫學院的遺傳學教授、「粒線體與代謝疾病中心」共同主任羅伯特・納維奧醫師（Robert Naviaux, MD），發表了他開創性的模型，從更深層的生化層面解釋了這些現象，稱為「細胞危險反應」（Cell Danger Response, CDR）。</p>
+        <p class="tip">納維奧博士觀察到，這些發炎性疾病中出現的複雜生化異常，都可以理解為一種深植於生物演化中的原始反應：當細胞感受到感染因子或毒素威脅時，便會啟動這套自我防禦機制。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="virus">
+    <h2>細胞遇到病毒時</h2>
+    <p class="lead">以病毒入侵細胞為例，納維奧博士詳細說明了細胞面對威脅時的一連串步驟。</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 520 640" role="img" aria-labelledby="cdr-title cdr-desc">
+        <title id="cdr-title">細胞危險反應示意圖</title>
+        <desc id="cdr-desc">病毒入侵細胞，粒線體偵測到後降低耗氧，啟動八個連鎖反應：代謝重編程、細胞膜變硬、釋放抗病毒抗菌物質、粒線體分裂與自噬、DNA 甲基化改變、啟動內源性反轉錄元素、釋放 eATP 警報訊號、經由中樞神經改變行為。訊號關閉後才能療癒；沒有關閉就會卡住、變成慢性。</desc>
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 Z" fill="var(--muted)"/>
+          </marker>
+          <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 Z" fill="var(--warm)"/>
+          </marker>
+        </defs>
+        <style>
+          .t { fill: var(--ink); font-size: 17px; }
+          .s { fill: var(--muted); font-size: 14px; }
+          .b { fill: var(--accent); }
+          .bt { fill: var(--paper); font-size: 14px; font-weight: 700; }
+          .ln { stroke: var(--muted); stroke-width: 2; fill: none; }
+        </style>
+
+        <!-- 病毒 -->
+        <text x="260" y="22" text-anchor="middle" class="s">壓力源：病毒入侵</text>
+        <g transform="translate(260 62)">
+          <g stroke="var(--warm)" stroke-width="2.5"><line x1="15.0" y1="0.0" x2="23.0" y2="0.0"/><circle cx="26.0" cy="0.0" r="3.5" fill="var(--warm)"/><line x1="10.6" y1="10.6" x2="16.3" y2="16.3"/><circle cx="18.4" cy="18.4" r="3.5" fill="var(--warm)"/><line x1="0.0" y1="15.0" x2="0.0" y2="23.0"/><circle cx="0.0" cy="26.0" r="3.5" fill="var(--warm)"/><line x1="-10.6" y1="10.6" x2="-16.3" y2="16.3"/><circle cx="-18.4" cy="18.4" r="3.5" fill="var(--warm)"/><line x1="-15.0" y1="0.0" x2="-23.0" y2="0.0"/><circle cx="-26.0" cy="0.0" r="3.5" fill="var(--warm)"/><line x1="-10.6" y1="-10.6" x2="-16.3" y2="-16.3"/><circle cx="-18.4" cy="-18.4" r="3.5" fill="var(--warm)"/><line x1="-0.0" y1="-15.0" x2="-0.0" y2="-23.0"/><circle cx="-0.0" cy="-26.0" r="3.5" fill="var(--warm)"/><line x1="10.6" y1="-10.6" x2="16.3" y2="-16.3"/><circle cx="18.4" cy="-18.4" r="3.5" fill="var(--warm)"/></g>
+          <circle r="15" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="2.5"/><circle cx="-5" cy="-4" r="2.5" fill="var(--warm)"/><circle cx="5" cy="3" r="2.5" fill="var(--warm)"/><circle cx="-2" cy="7" r="2" fill="var(--warm)"/>
+        </g>
+
+        <!-- 細胞 -->
+        <rect x="60" y="84" width="400" height="300" rx="40" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="6"/>
+
+        <!-- 2 細胞膜 -->
+        <circle cx="60" cy="140" r="12" class="b"/><text x="60" y="145" text-anchor="middle" class="bt">2</text>
+        <text x="80" y="128" class="t">細胞膜變硬</text>
+
+        <!-- 粒線體 -->
+        <ellipse cx="290" cy="168" rx="120" ry="40" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="2.5"/>
+        <text x="290" y="162" text-anchor="middle" class="t" font-weight="700">粒線體偵測到入侵者</text>
+        <text x="290" y="184" text-anchor="middle" class="s">降低耗氧 → 細胞變得更具氧化性</text>
+
+        <!-- 1, 3, 4 -->
+        <circle cx="98" cy="240" r="12" class="b"/><text x="98" y="245" text-anchor="middle" class="bt">1</text>
+        <text x="118" y="245" class="t">代謝重編程</text>
+        <circle cx="98" cy="282" r="12" class="b"/><text x="98" y="287" text-anchor="middle" class="bt">4</text>
+        <text x="118" y="280" class="t">粒線體分裂</text>
+        <text x="118" y="298" class="s">自噬增加</text>
+        <circle cx="98" cy="334" r="12" class="b"/><text x="98" y="339" text-anchor="middle" class="bt">3</text>
+        <text x="118" y="330" class="t">釋放抗病毒</text>
+        <text x="118" y="348" class="s">與抗菌物質</text>
+        <line x1="84" y1="334" x2="24" y2="334" class="ln" marker-end="url(#ar)"/>
+
+        <!-- 細胞核 5, 6 -->
+        <ellipse cx="340" cy="300" rx="92" ry="60" fill="var(--paper)" stroke="var(--muted)" stroke-width="2"/>
+        <text x="340" y="268" text-anchor="middle" class="s">細胞核</text>
+        <circle cx="272" cy="296" r="12" class="b"/><text x="272" y="301" text-anchor="middle" class="bt">5</text>
+        <text x="292" y="301" class="t">DNA 甲基化改變</text>
+        <circle cx="272" cy="332" r="12" class="b"/><text x="272" y="337" text-anchor="middle" class="bt">6</text>
+        <text x="292" y="337" class="t">啟動反轉錄元素</text>
+
+        <!-- 7 eATP -->
+        <line x1="260" y1="388" x2="260" y2="418" class="ln" marker-end="url(#ar)"/>
+        <rect x="150" y="422" width="220" height="46" rx="14" fill="var(--warm-soft)" stroke="var(--warm)" stroke-width="2.5"/>
+        <circle cx="172" cy="445" r="12" fill="var(--warm)"/><text x="172" y="450" text-anchor="middle" class="bt">7</text>
+        <text x="270" y="442" text-anchor="middle" class="t" font-weight="700">釋放 eATP 警報</text>
+        <text x="270" y="460" text-anchor="middle" class="s">警告鄰近與遠端細胞</text>
+
+        <!-- 召集免疫細胞 -->
+        <line x1="150" y1="458" x2="96" y2="494" class="ln" marker-end="url(#ar)"/>
+        <text x="72" y="514" text-anchor="middle" class="s">召集</text>
+        <text x="72" y="532" text-anchor="middle" class="s">免疫細胞</text>
+
+        <!-- 沒關掉 → 慢性 -->
+        <line x1="370" y1="445" x2="404" y2="445" stroke="var(--warm)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arw)"/>
+        <text x="460" y="438" text-anchor="middle" font-size="13" font-weight="700" fill="var(--warm)">沒有關掉</text>
+        <text x="460" y="456" text-anchor="middle" font-size="13" font-weight="700" fill="var(--warm)">→ 卡住、慢性化</text>
+
+        <!-- 8 中樞神經 → 生病行為 → 療癒 -->
+        <line x1="260" y1="472" x2="260" y2="500" class="ln" marker-end="url(#ar)"/>
+        <rect x="190" y="504" width="140" height="40" rx="12" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+        <circle cx="210" cy="524" r="12" class="b"/><text x="210" y="529" text-anchor="middle" class="bt">8</text>
+        <text x="272" y="529" text-anchor="middle" class="t">中樞神經</text>
+        <line x1="260" y1="548" x2="260" y2="574" class="ln" marker-end="url(#ar)"/>
+        <text x="260" y="598" text-anchor="middle" class="t" font-weight="700">生病行為</text>
+        <text x="260" y="618" text-anchor="middle" class="s">疲倦、嗜睡，被迫休息</text>
+        <text x="369" y="588" text-anchor="middle" font-size="11" fill="var(--muted)">訊號關閉後</text><line x1="340" y1="600" x2="398" y2="600" class="ln" marker-end="url(#ar)"/>
+        <rect x="404" y="580" width="84" height="40" rx="20" fill="var(--accent)"/>
+        <text x="446" y="605" text-anchor="middle" font-size="15" font-weight="700" fill="var(--paper)">療癒</text>
+      </svg>
+      <figcaption>細胞危險反應簡化示意圖（參考書中 Figure 11.1 以中文重繪）</figcaption>
+    </figure>
+
+    <article class="item">
+      <div class="n">4</div>
+      <div>
+        <h3>第一步：粒線體偵測到入侵者</h3>
+        <div class="flow" aria-label="粒線體偵測入侵者，降低耗氧，細胞變得更具氧化性，保護細胞">
+          <span>偵測入侵者</span><i>→</i><span>降低耗氧</span><i>→</i><span>更具氧化性</span><i>→</i><span>保護細胞</span>
+        </div>
+        <p>第一個發生的事情是：粒線體（細胞內負責製造能量的胞器）偵測到入侵者的存在。一旦偵測到，粒線體會立即反應，降低氧氣消耗量。</p>
+        <p>當粒線體內的氧氣濃度上升，細胞內的氧化還原反應（redox chemistry）變得更具氧化性，這樣可以保護細胞，防止進一步損傷。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="eight">
+    <h2>8 個連鎖反應</h2>
+    <p class="lead">粒線體內氧氣濃度上升時，會引發八個連鎖反應，作為這個保護性機制的一部分。</p>
+
+    <article class="item"><div class="n">1</div><div><h3>代謝重編程</h3><p>Metabolic shift</p></div></article>
+    <article class="item"><div class="n">2</div><div><h3>細胞膜變硬</h3></div></article>
+    <article class="item"><div class="n">3</div><div><h3>釋放抗病毒與抗菌化學物質</h3></div></article>
+    <article class="item"><div class="n">4</div><div><h3>自噬與粒線體分裂增加</h3><p>Autophagy、Mitochondrial fission</p></div></article>
+    <article class="item"><div class="n">5</div><div><h3>DNA 甲基化與組蛋白變化</h3><p>阻斷病毒利用我們細胞的能力。</p></div></article>
+    <article class="item"><div class="n">6</div><div><h3>啟動內源性反轉錄病毒與基因元素</h3></div></article>
+    <article class="item key">
+      <div class="n">7</div>
+      <div>
+        <h3>警告鄰近與遠端細胞：釋放細胞外 ATP（eATP）</h3>
+        <p class="alert">⚠️ 除非這個 eATP 訊號被關閉，身體無法恢復正常。</p>
+        <p><b>這正是解釋為何許多疾病會變成慢性的重要線索。</b></p>
+      </div>
+    </article>
+    <article class="item"><div class="n">8</div><div><h3>改變宿主行為</h3><p>感染會使人出現疲倦與嗜睡，迫使我們休息，以節省能量、抑制活動，限制感染擴散。</p></div></article>
+
+    <p class="see">→ 回到首頁重新開機的<a href="./#step4">第 4 步「關掉細胞危險反應」</a>。</p>
+  </section>
+
+  <div class="nextprev"><a class="btn" href="./#reboot">← 回到治療的順序</a></div>
+
+  <footer>
+    <p>整理自 Neil Nathan, MD，<i>Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness</i>，2nd Edition，Victory Belt Publishing，2025，第 11 章。示意圖參考書中 Figure 11.1（源自 Robert Naviaux 的細胞危險反應模型）以中文簡化重繪。</p>
+    <p>本頁為讀者個人整理，不構成醫療建議。</p>
+  </footer>
+</main>
+</body>
+</html>
