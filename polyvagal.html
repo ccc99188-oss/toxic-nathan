@@ -80,6 +80,13 @@
 
   footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
   footer p { margin: 0 0 6px; }
+  /* 段落編號為第一層；卡片不編號 */
+  h2 .sec {
+    flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+    background: var(--accent); color: var(--paper); font-size: 1.05rem;
+  }
+  section { margin-top: 64px; }
+  .item { grid-template-columns: 1fr; border-left: 4px solid var(--accent); padding-left: 20px; }
   .see { font-size: .9rem; color: var(--accent); }
   .see a { color: inherit; font-weight: 600; }
   :root { --red: #a8453a; --red-soft: #f6e2df; --violet: #5b5aa6; --violet-soft: #e6e6f6; }
@@ -161,9 +168,8 @@
   </header>
 
   <section id="two">
-    <h2>迷走神經，其實有兩條</h2>
+    <h2><span class="sec">一</span>迷走神經，其實有兩條</h2>
     <article class="item">
-      <div class="n">1</div>
       <div>
         <h3>不是單一路徑</h3>
         <p>Porges 博士長年研究自律神經的反應後發現：迷走神經（Vagus Nerve）這條屬於副交感神經系統的關鍵神經，並不是單一路徑，而是由兩條來自不同腦區的神經融合而成。</p>
@@ -176,7 +182,7 @@
   </section>
 
   <section id="ladder">
-    <h2>三層反應</h2>
+    <h2><span class="sec">二</span>三層反應</h2>
     <p class="lead">從演化來看，神經系統依序發展出三種反應。感到安全時在最上層；威脅越大，就往下層掉。</p>
     <figure class="ladder">
       <p class="title">多重迷走神經理論</p>
@@ -205,7 +211,6 @@
     </figure>
 
     <article class="item">
-      <div class="n">2</div>
       <div>
         <h3>協調的舞蹈</h3>
         <p>腹側迷走神經是哺乳動物特有的系統，能整合社交互動與生理狀態的調節。</p>
@@ -215,9 +220,8 @@
   </section>
 
   <section id="freeze">
-    <h2>戰或逃之外的「凍結」</h2>
+    <h2><span class="sec">三</span>戰或逃之外的「凍結」</h2>
     <article class="item">
-      <div class="n">3</div>
       <div>
         <h3>第三種壓力反應</h3>
         <p>Porges 博士發現：當戰或逃無法解決威脅時，生物體會進入第三種壓力反應：凍結（Freeze）。</p>
@@ -234,10 +238,9 @@
   </section>
 
   <section id="safety">
-    <h2>安全感是療癒的核心</h2>
+    <h2><span class="sec">四</span>安全感是療癒的核心</h2>
 
     <article class="item">
-      <div class="n">4</div>
       <div>
         <h3>安全感不是想出來的</h3>
         <p>理解這些反應的關鍵在於：這些人不再感到安全。而安全感，是生理與心理恢復的前提。</p>
@@ -246,7 +249,6 @@
     </article>
 
     <article class="item">
-      <div class="n">5</div>
       <div>
         <h3>和「細胞危險反應」不謀而合</h3>
         <p>Robert Naviaux 博士的細胞危險反應（Cell Danger Response, CDR）也指出：細胞若還沒確認「威脅已解除」，就會持續維持警戒，身體也因此無法重啟修復。</p>
@@ -256,7 +258,6 @@
     </article>
 
     <article class="item">
-      <div class="n">6</div>
       <div>
         <h3>慢性病人的共通點</h3>
         <p>慢性疲勞症候群、纖維肌痛等慢性疾病的病人，常見的共通點是：身體長期處在壓力或創傷之中，無法確信「我已經安全」。</p>
