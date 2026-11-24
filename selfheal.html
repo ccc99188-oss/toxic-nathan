@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>療癒自己｜Toxic 第二版 讀書摘要</title>
+<meta name="description" content="Neil Nathan 寫給醫療人員的提醒：心理、情緒、靈性的療癒需要信任與安全的空間。反過來讀，也是寫給想療癒自己的人。">
+<meta property="og:title" content="療癒自己｜Toxic 第二版 讀書摘要">
+<meta property="og:description" content="對自己有足夠的信任，覺得是安全的，才有可能開始探索。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#eef2ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root {
+    --bg: #eef2ec; --paper: #fbfcfa; --ink: #1f2a24; --muted: #5f6d65; --line: #d7e0d8;
+    --accent: #2f6b4f; --accent-soft: #dcebe2; --warm: #9a5b1e; --warm-soft: #f5e9da;
+    --radius: 18px;
+    --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a17; --paper: #1c2420; --ink: #e8efe9; --muted: #a3b2a9; --line: #2f3b35;
+      --accent: #8fd0ad; --accent-soft: #213229; --warm: #e6b07a; --warm-soft: #33281d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.85; font-size: 17px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  .back { display: inline-block; margin: 20px 0 0; font-size: .88rem; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  header.hero { padding: 40px 0 24px; text-align: center; }
+  .hero .step { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 12px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2rem, 8vw, 2.6rem); letter-spacing: .1em; margin: 14px 0 6px; }
+  .hero .sub { margin: 0; color: var(--muted); font-size: .96rem; }
+  .intro {
+    margin: 26px auto 0; padding: 18px 22px; text-align: left;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 1rem;
+  }
+  .intro p { margin: 0; }
+
+  nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  nav.toc a { font-size: .85rem; text-decoration: none; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 12px; }
+
+  section { margin-top: 52px; scroll-margin-top: 16px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { color: var(--muted); margin: 0 0 18px; font-size: .96rem; }
+
+  .item {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px 18px; margin-bottom: 14px;
+    display: grid; grid-template-columns: 40px 1fr; gap: 6px 14px;
+  }
+  .item .n {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .92rem;
+    display: grid; place-items: center;
+  }
+  .item h3 { font-family: var(--serif); font-size: 1.12rem; margin: 4px 0 6px; line-height: 1.5; }
+  .item p { margin: 0 0 8px; font-size: .97rem; }
+  .item p:last-child { margin: 0; }
+  .item .ic { margin-right: 4px; }
+  .tip { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc { background: var(--warm-soft); border-radius: 10px; padding: 8px 12px; font-size: .92rem; }
+  .doc b { color: var(--warm); }
+  @media (max-width: 480px) {
+    .item { grid-template-columns: 1fr; }
+  }
+
+
+  .nextprev { margin-top: 44px; display: flex; justify-content: center; }
+  .btn { display: inline-block; text-decoration: none; font-size: .95rem; background: var(--accent); color: var(--paper); border-radius: 999px; padding: 10px 22px; }
+
+  footer { margin-top: 48px; font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  footer p { margin: 0 0 6px; }
+  .see { font-size: .9rem; color: var(--accent); }
+  .see a { color: inherit; font-weight: 600; }
+  .mirror { display: grid; gap: 10px; margin-top: 6px; }
+  .mirror .head, .mirror .row { display: grid; grid-template-columns: 1fr 28px 1fr; gap: 8px; align-items: stretch; }
+  .mirror .head div { text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em; padding: 4px 0; }
+  .mirror .head .l { color: var(--accent); } .mirror .head .r { color: var(--warm); }
+  .mirror .row > div { border-radius: 12px; padding: 12px 14px; font-size: .94rem; line-height: 1.7; }
+  .mirror .row .l { background: var(--paper); border: 1px solid var(--line); }
+  .mirror .row .r { background: var(--warm-soft); }
+  .mirror .row .arr { display: grid; place-items: center; color: var(--muted); font-size: 1.1rem; padding: 0; background: none; }
+  .mirror b { display: block; font-family: var(--serif); font-size: 1rem; margin-bottom: 2px; }
+  .mirror .l b { color: var(--accent); } .mirror .r b { color: var(--warm); }
+  @media (max-width: 520px) {
+    .mirror { gap: 22px; }
+    .mirror .head { display: none; }
+    .mirror .row { grid-template-columns: 1fr; gap: 4px; }
+    .mirror .row .arr { transform: rotate(90deg); height: 20px; }
+    .mirror .row .l::before { content: "給醫療人員"; display: block; font-size: .74rem; font-weight: 700; letter-spacing: .08em; color: var(--muted); }
+    .mirror .row .r::before { content: "給自己"; display: block; font-size: .74rem; font-weight: 700; letter-spacing: .08em; color: var(--muted); }
+  }
+  .reflect {
+    background: var(--warm-soft); border-radius: var(--radius); padding: 24px 22px 20px;
+    border-left: 4px solid var(--warm); margin-bottom: 14px;
+  }
+  .reflect .label { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .1em; color: var(--warm); margin-bottom: 6px; }
+  .reflect h3 { font-family: var(--serif); font-size: 1.15rem; margin: 0 0 12px; }
+  .reflect p { margin: 0 0 12px; font-size: .97rem; }
+  .reflect .sign { text-align: right; color: var(--muted); font-size: .88rem; margin: 14px 0 0; }
+  .hope {
+    margin-top: 16px; text-align: center; padding: 26px 22px;
+    background: var(--accent-soft); border-radius: var(--radius);
+    font-family: var(--serif); font-size: 1.08rem; line-height: 1.9;
+  }
+  .hope p { margin: 0; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./#heal">← 回到 Toxic 讀書摘要</a>
+
+  <header class="hero">
+    <span class="step">療癒，也關乎心</span>
+    <h1>療癒自己</h1>
+    <p class="sub">Neil Nathan《Toxic》第二版 讀書摘要與反思</p>
+    <div class="intro">
+      <p>當心理、情緒或靈性的議題，阻礙了身體能量的自由流動，這些問題無法在一次就診中解決，往往要一年、甚至更多年。作者寫給醫療人員的提醒，反過來讀，也是寫給每個想療癒自己的人。</p>
+    </div>
+    <nav class="toc" aria-label="目錄">
+      <a href="#space">信任與安全的空間</a>
+      <a href="#mirror">反過來看：給自己</a>
+    </nav>
+  </header>
+
+  <section id="space">
+    <h2>信任與安全的空間</h2>
+    <p class="lead">以下是作者寫給醫療從業人員的建議。</p>
+
+    <article class="item">
+      <div class="n">1</div>
+      <div>
+        <h3>不是一次就診能解決的</h3>
+        <p>如果有心理、情緒或靈性的領域，在阻礙身體能量的自由流動，這些問題無法在一次就診中解決，而且通常一年、甚至更多年都沒辦法解決。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">2</div>
+      <div>
+        <h3>先累積信任，才能一起探索</h3>
+        <p>這需要累積信任，讓人覺得足夠安全，才有可能開始一同探索。</p>
+        <p class="tip">需要一位敏銳、富有同理心、善解人意的醫療從業人員，來建立這樣的信任空間。</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="n">3</div>
+      <div>
+        <h3>門打開的那一刻，最容易受傷</h3>
+        <p>即便如此，當病人願意開放地討論這些可能性的那一刻（可能是多年來的第一次），仍然非常容易受傷。</p>
+        <p class="doc"><b>作者觀點：</b>當這扇門打開時，要非常小心、有分寸地和病人一起回顧「過往治療進展比較有限」的情況，再提議：也許還有另一個領域，阻止我們走向康復。</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="mirror">
+    <h2>反過來看：給自己</h2>
+
+    <article class="reflect">
+      <span class="label">我的反思</span>
+      <h3>把寫給醫師的話，留給自己</h3>
+      <p>上面是 Dr. Neil Nathan 寫給醫療從業人員的建議，我則是把它反過來看：</p>
+      <p>如果我要療癒自己的心理、情緒、靈性，需要非常小心，要對自己有足夠的信任、覺得是安全的，才有可能開始探索。</p>
+      <p>在整條路上，都需要對自己保持敏銳的覺察，能夠同理自己身、心的各個部分，並且接納：當時會有這些反應，一定有它最好的理由。</p>
+      <p class="sign">撰文者：林俊言中醫師</p>
+    </article>
+
+    <div class="mirror" aria-label="醫療人員的角色與自我療癒的對照">
+      <div class="head"><div class="l">給醫療人員</div><div></div><div class="r">給自己</div></div>
+      <div class="row">
+        <div class="l"><b>累積信任</b>和病人慢慢建立關係</div>
+        <div class="arr" aria-hidden="true">→</div>
+        <div class="r"><b>信任自己</b>對自己有足夠的信任</div>
+      </div>
+      <div class="row">
+        <div class="l"><b>讓人覺得安全</b>才可能一同探索</div>
+        <div class="arr" aria-hidden="true">→</div>
+        <div class="r"><b>讓自己覺得安全</b>才可能開始探索</div>
+      </div>
+      <div class="row">
+        <div class="l"><b>敏銳、有同理心</b>善解人意的從業人員</div>
+        <div class="arr" aria-hidden="true">→</div>
+        <div class="r"><b>敏銳地覺察自己</b>同理自己身、心的各個部分</div>
+      </div>
+      <div class="row">
+        <div class="l"><b>小心、有分寸</b>門打開時，非常容易受傷</div>
+        <div class="arr" aria-hidden="true">→</div>
+        <div class="r"><b>溫柔地接納</b>這些反應，一定有它最好的理由</div>
+      </div>
+    </div>
+
+    <div class="hope">
+      <p>當時會有這些反應，<br>一定有它最好的理由。</p>
+    </div>
+
+    <p class="see" style="margin-top:18px;text-align:center">→ 延伸閱讀：<a href="heart.html">「舊襯衫與生命的意義」</a>、<a href="polyvagal.html">「多重迷走神經理論」</a>。</p>
+  </section>
+
+  <div class="nextprev"><a class="btn" href="./#heal">← 回到療癒，也關乎心</a></div>
+
+  <footer>
+    <p>整理自 Neil Nathan, MD，<i>Toxic: Heal Your Body from Mold Toxicity, Lyme Disease, Multiple Chemical Sensitivities, and Chronic Environmental Illness</i>，2nd Edition，Victory Belt Publishing，2025。「反過來看：給自己」一節為讀者本人的反思。</p>
+    <p>本頁為讀者個人整理，不構成醫療或心理治療建議。探索心理、情緒議題時，若感到難以承受，請尋求信任的醫師或心理專業人員陪伴。</p>
+  </footer>
+</main>
+</body>
+</html>
